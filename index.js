@@ -1,4 +1,7 @@
+import user from './user'
+
 function Baseball() {
+  console.log(user)
   this.users = []
   this.ready = false
 
