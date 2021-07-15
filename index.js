@@ -1,17 +1,10 @@
-import user from './user'
-
 function Baseball() {
+  const user = setUser('Tome')
+
   console.log(user)
-  this.users = []
-  this.ready = false
+}
 
-  this.setUser = (name) => {
-    this.users.push(name)
-    this.ready = true
-    console.log('ready to game')
-  }
-
-  this.startGame = () => {
-    
-  }
+function setUser(name, age) {
+  this.name = name || 'Guest'
+  this.age = age
 }
