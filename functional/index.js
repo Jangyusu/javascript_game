@@ -1,10 +1,6 @@
 function Baseball() {
   this.started = false;
   this.playerName = '';
-  this.answer = null;
-  this.strike = 0;
-  this.ball = 0;
-  this.out = 0;
   this.myHistory = []
 
   this.start = function() {
