@@ -2,9 +2,9 @@ import { User } from './user'
 import { Ball } from './ball';
 import { History } from './history';
 
-export class Baseball {
+class Baseball {
   constructor() {
-    this.user = {};
+    this.user = null;
     this.started = false;
   }
 
@@ -27,12 +27,12 @@ export class Baseball {
       return console.log('제출하기 전 게임을 먼저 시작해주세요');
     }
 
-    if (Object.keys(this.user).length === 0 && this.user.constructor === Object) {
+    if (this.user) {
       return console.log('제출하기 전 유저를 먼저 설정해주세요');
     }
     
     if (Ball.answer.join('') === num) {
-      console.log('홈런!!');
+      this.endGame();
     } else {
       Ball.strike = 0;
       Ball.ball = 0;
@@ -71,6 +71,13 @@ export class Baseball {
     } else {
       console.log('게임 기록이 없습니다');
     }
+  }
+
+  endGame() {
+    console.log('홈런!!! 게임이 종료되었습니다.');
+
+    this.started = false;
+    this.user = null;
   }
 }
 
