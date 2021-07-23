@@ -5,9 +5,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script type="module" src="./class/index.js"></script>
+  <!-- <script type="module" src="./class/index.js"></script> -->
+  <script type="module" src="functional/index.js"></script>
 </head>
 <body>
-  
+  <div class="app">
+    <button class="historyBtn">기록 보기</button>
+    <button class="answerBtn">정답 보기</button>
+    <div class="historyList"></div>
+  </div>
 </body>
+<style>
+  html, body, .app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .historyList {
+    li {
+
+    }
+  }
+</style>
 </html>
